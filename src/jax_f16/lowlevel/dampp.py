@@ -40,7 +40,7 @@ def dampp(alpha: FloatScalar) -> FloatScalar:
     #     k = -1
     # if k >= 9:
     #     k = 8
-    k = jnp.clip(k, min=-1, max=8)
+    k = jnp.clip(k, -1, 8)
 
     da = s - k
     l = k + jnp.fix(1.1 * jnp.sign(da)).astype(jnp.int32)
